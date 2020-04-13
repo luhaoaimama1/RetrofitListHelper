@@ -1,13 +1,10 @@
-package zone.com.retrofitlib.android.utils;
+package zone.com.okhttplib.android.utils;
 import android.annotation.TargetApi;
 import android.os.AsyncTask;
 import android.os.Build;
 import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)

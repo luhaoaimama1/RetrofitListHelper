@@ -24,30 +24,28 @@ package zone.com.sdk.base;
 import java.util.concurrent.TimeUnit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import zone.com.retrofitlib.BaseNetwork;
-import zone.com.retrofitlib.RunConfig;
+import zone.com.okhttplib.BaseOKHttpClient;
 import zone.com.sdk.base.extra.CacheUtil;
 import zone.com.sdk.base.extra.TokenInterceptor;
 import zone.com.sdk.base.extra.ZAuthenticator;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import zone.com.retrofitlib.Config;
-import zone.com.retrofitlib.java.cookie.CookieJarImpl;
-import zone.com.retrofitlib.java.cookie.store.SPCookieStore;
-import zone.com.retrofitlib.RetrofitHelper;
+import zone.com.okhttplib.Config;
+import zone.com.okhttplib.java.cookie.CookieJarImpl;
+import zone.com.okhttplib.java.cookie.store.SPCookieStore;
 
 /**
  * 实现类，具体实现在此处
  *
  * @param <Service>
  */
-public class BaseImpl<Service> extends BaseNetwork<Service> {
+public class BaseImpl<Service> extends BaseOKHttpClient<Service> {
 
     protected CacheUtil mCacheUtil;
 
     @Override
     protected void onCreate() {
-        if (RunConfig.isAPP) {
+        if (Config.isAPP) {
             if (context == null) {
                 throw new IllegalStateException("Please use method Config.getInstance().setContext(context)");
             }
@@ -61,15 +59,15 @@ public class BaseImpl<Service> extends BaseNetwork<Service> {
         boolean isDebug = Config.getInstance().isDebug();
 
         OkHttpClient.Builder builder = new OkHttpClient.Builder()
-                .addInterceptor(RetrofitHelper.getHttpLoggingInterceptor(isDebug))                // 设置拦截器
-                .addNetworkInterceptor(RetrofitHelper.getStethoInterceptor(isDebug)) //stetho
+                .addInterceptor(getHttpLoggingInterceptor(isDebug))  // 设置拦截器
+                .addNetworkInterceptor(getStethoInterceptor(isDebug)) //stetho
                 .retryOnConnectionFailure(true)             // 是否重试
                 .connectTimeout(5, TimeUnit.SECONDS)        // 连接超时事件
                 .readTimeout(5, TimeUnit.SECONDS)           // 读取超时时间
                 .connectTimeout(15, TimeUnit.SECONDS);       // 连接超时时间 默认10秒
 
         if (context != null) {
-            builder.cache(RetrofitHelper.getCache())
+            builder.cache(getCache()) //缓存存储目录
                     .addNetworkInterceptor(new TokenInterceptor(mCacheUtil))  // 自动附加 token
                     .authenticator(new ZAuthenticator(mCacheUtil))            // 认证失败自动刷新token
                     .cookieJar(new CookieJarImpl(new SPCookieStore(context)));//使用sp保持cookie，如果cookie不过期，则一直有效

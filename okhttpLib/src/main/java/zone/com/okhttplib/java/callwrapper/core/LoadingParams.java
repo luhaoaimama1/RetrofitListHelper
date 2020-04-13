@@ -1,4 +1,4 @@
-package zone.com.retrofitlib.java.callwrapper.core;
+package zone.com.okhttplib.java.callwrapper.core;
 
 /**
  * Created by Zone on 2016/2/10.

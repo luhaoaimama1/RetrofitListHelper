@@ -19,7 +19,7 @@
  * Website: http://www.gcssloop.com
  * Weibo:   http://weibo.com/GcsSloop
  */
-package zone.com.retrofitlib.android.utils;
+package zone.com.okhttplib.android.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,4 +1,4 @@
-package zone.com.retrofitlib.java.callwrapper.down;
+package zone.com.okhttplib.java.callwrapper.down;
 
 
 import java.io.File;
@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import okhttp3.ResponseBody;
-import zone.com.retrofitlib.android.MainHandlerUtils;
-import zone.com.retrofitlib.java.callwrapper.core.ProgressCallback;
+import zone.com.okhttplib.android.MainHandlerUtils;
+import zone.com.okhttplib.java.callwrapper.core.ProgressCallback;
 
 /**
  * Created by Administrator on 2016/6/18.

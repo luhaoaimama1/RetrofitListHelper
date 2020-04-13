@@ -1,4 +1,4 @@
-package zone.com.retrofitlib.android.views;
+package zone.com.okhttplib.android.views;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.FrameLayout;
 
-import zone.com.retrofitlib.R;
+import zone.com.okhttplib.R;
 
 /**
  * [2017] by Zone
