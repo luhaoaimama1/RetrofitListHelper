@@ -1,4 +1,4 @@
-# RetrofitListHelper
+# ZDialogOKHttp
 #### [中文版文档](./README-cn.md)
 
 # Usage
@@ -13,37 +13,29 @@ Add it in your root build.gradle at the end of repositories:
 		}
 	}
 Step 2. Add the dependency
-* The overview
-    * compile 'com.github.luhaoaimama1.RetrofitListHelper:retrofitLib:[Latest release](https://github.com/luhaoaimama1/ZAdapter3/releases)'
 
-    * compile 'com.github.luhaoaimama1.RetrofitListHelper:retrofitHelper:[Latest release](https://github.com/luhaoaimama1/ZAdapter3/releases)'
+    * compile 'com.github.luhaoaimama1:ZDialogOKHttp:[Latest release](https://github.com/luhaoaimama1/ZDialogOKHttp/releases)'
 
-    * compile 'com.github.luhaoaimama1.RetrofitListHelper:zhelper:[Latest release](https://github.com/luhaoaimama1/ZAdapter3/releases)'
+# Function Description
 
-> Tips:zhelper Rely on retrofitHelper,retrofitHelper Rely onretrofitLib ,So you choose a can!
+> a little practice for apt to use for apisdk. The project is focused on okhttplib.
 
-# Function is introduced
+-[x] network request library supports uploading and downloading https cookies, etc.;
 
-## retrofitLib
+-[x] may be associated with requests such as dialog pop view.
 
--[x] Uploads and downloads the HTTPS library support network request cookies, etc.;
+-[x] can also be associated with the network state layout generally used when first loaded;
 
--[x] support rxjava2
+-[x] copy from retrofit when x] support rxjava2.
 
--[x] You can request associated with dialog pop view, etc
-
--[x] FirstLoad that state of network association;
-
-## retrofitHelper
-
-A drop-down pull up load automatically refresh and abstract library;
-
-## zhelper
-
-The realization of a retrofitHelper library
-
-*   The drop-down on refresh and load the library:ZRefresh
-*   Adapter libraries :ZAdapter3
+```
+    Some common class presentations
+         DownLoadCall for download
+         DialogCall network requests bound to pop-up windows
+         map for RequestBodyHelper transfer can be placed directly into the file
+         BaseOKHttpClient base okhttp client
+         BaseImpl is a basic setup client.
+```
 
 
 # Easy use:
@@ -106,36 +98,6 @@ Before using the configuration
                     }
                 });
 ```
-
-4.On the drop-down to refresh and automatically loaded
-
-```
-
-        final ZonePullView zonePullView = new ZonePullView<MeiZiData>(refresh, adapter) {
-            @NonNull
-            @Override
-            protected Call<MeiZiData> request(int offset, int limit) {
-                return Diycode.getInstance()
-                        .getPics(offset + "", limit + "");
-            }
-
-            @Override
-            protected void handleData(int offset, MeiZiData body) {
-                datas.addAll(body.getResults());
-            }
-        };
-```
-
-# The project practice
-
-https://github.com/NewbeeMaster/NBDiycode
-
-
-# Update log
-
-## 1.0.2
-
-  * 1.init commit
 
 
 # Reference&Thanks：

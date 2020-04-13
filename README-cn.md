@@ -4,18 +4,21 @@
 
 -[x] 网络请求库 支持上传下载 https cookies等;
 
--[x] 支持rxjava2
-
 -[x] 可以与dialog pop view等进行请求关联
 
--[x] firstLoad那种 网络状态关联;
+-[x] 也可以关联网络状态布局 一般第一次加载的时候用到;
 
-DownLoadCall 下载用的
-DialogCall 网络请求与弹窗绑定用的
-RequestBodyHelper  传参用的map可以直接放入文件
-BaseOKHttpClient 基类okhttp客户端
-BaseImpl 是一个基础设置client
+-[x] 支持rxjava2的时候方式  copy from retrofit
 
+
+```
+    一些常用的类介绍
+        DownLoadCall 下载用的
+        DialogCall 网络请求与弹窗绑定用的
+        RequestBodyHelper  传参用的map可以直接放入文件
+        BaseOKHttpClient 基类okhttp客户端
+        BaseImpl 是一个基础设置client
+```
 
 # Easy use:
 
@@ -23,6 +26,7 @@ BaseImpl 是一个基础设置client
 
 ```
  Config.getInstance().setContext(this);
+
 ```
 
 1.pop关联范例:
@@ -78,16 +82,6 @@ BaseImpl 是一个基础设置client
                 });
 ```
 
-# 项目实践
-
-
-# Update log
-
->由于每个版本更新的东西较多，所以从现在开始每个版本都会贴上更新日志.
-
-## 1.0.2
-
-  * 1.初始完成
 
 
 # Reference&Thanks：
