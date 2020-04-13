@@ -1,1 +1,1 @@
-include ':app', ':retrofitHelper', ':retrofitLib', ':sdk', ':zhelper', ':aptlib', ':aptAnnotate'
+include ':app', ':okhttpLib', ':apiSdk',  ':aptlib', ':aptAnnotate'

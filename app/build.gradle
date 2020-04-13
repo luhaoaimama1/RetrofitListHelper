@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "zone.com.retrofitlisthelper"
+        applicationId "zone.com.okhttplib"
         minSdkVersion 16
         versionCode 1
         versionName "1.0"
@@ -39,9 +39,9 @@ dependencies {
     api 'androidx.appcompat:appcompat:1.0.0'
     api 'androidx.constraintlayout:constraintlayout:1.1.3'
     api 'com.github.bumptech.glide:glide:3.7.0'
-    api project(':retrofitHelper')
-    api project(path: ':sdk')
+    api project(path: ':apiSdk')
     api "androidx.core:core-ktx:+"
+    api'com.github.luhaoaimama1:ZAdapter3KT:2.0.5'
     api  'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"

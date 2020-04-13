@@ -9,16 +9,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/apiSdk" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/apt" />
+            <option value="$PROJECT_DIR$/aptAnnotate" />
             <option value="$PROJECT_DIR$/aptlib" />
-            <option value="$PROJECT_DIR$/retrofitHelper" />
-            <option value="$PROJECT_DIR$/retrofitLib" />
-            <option value="$PROJECT_DIR$/sdk" />
-            <option value="$PROJECT_DIR$/zhelper" />
+            <option value="$PROJECT_DIR$/okhttpLib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

@@ -8,16 +8,14 @@
       <module fileurl="file://$PROJECT_DIR$/apt/RetrofitListHelper-apt.iml" filepath="$PROJECT_DIR$/apt/RetrofitListHelper-apt.iml" />
       <module fileurl="file://$PROJECT_DIR$/aptlib/RetrofitListHelper-aptlib.iml" filepath="$PROJECT_DIR$/aptlib/RetrofitListHelper-aptlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrofitHelper/RetrofitListHelper-retrofitHelper.iml" filepath="$PROJECT_DIR$/retrofitHelper/RetrofitListHelper-retrofitHelper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/retrofitLib/RetrofitListHelper-retrofitLib.iml" filepath="$PROJECT_DIR$/retrofitLib/RetrofitListHelper-retrofitLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sdk/RetrofitListHelper-sdk.iml" filepath="$PROJECT_DIR$/sdk/RetrofitListHelper-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttpLib/RetrofitListHelper-retrofitLib.iml" filepath="$PROJECT_DIR$/okhttpLib/RetrofitListHelper-retrofitLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apiSdk/RetrofitListHelper-sdk.iml" filepath="$PROJECT_DIR$/apiSdk/RetrofitListHelper-sdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/zhelper/RetrofitListHelper-zhelper.iml" filepath="$PROJECT_DIR$/zhelper/RetrofitListHelper-zhelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apiSdk/apiSdk.iml" filepath="$PROJECT_DIR$/apiSdk/apiSdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/apt/apt.iml" filepath="$PROJECT_DIR$/apt/apt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aptAnnotate/aptAnnotate.iml" filepath="$PROJECT_DIR$/aptAnnotate/aptAnnotate.iml" />
       <module fileurl="file://$PROJECT_DIR$/aptlib/aptlib.iml" filepath="$PROJECT_DIR$/aptlib/aptlib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/retrofitHelper/retrofitHelper.iml" filepath="$PROJECT_DIR$/retrofitHelper/retrofitHelper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/retrofitLib/retrofitLib.iml" filepath="$PROJECT_DIR$/retrofitLib/retrofitLib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sdk/sdk.iml" filepath="$PROJECT_DIR$/sdk/sdk.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zhelper/zhelper.iml" filepath="$PROJECT_DIR$/zhelper/zhelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okhttpLib/okhttpLib.iml" filepath="$PROJECT_DIR$/okhttpLib/okhttpLib.iml" />
     </modules>
   </component>
 </project>

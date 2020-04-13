@@ -1,29 +1,6 @@
-# RetrofitListHelper
-
-# Usage
-
-### JicPack
-Add it in your root build.gradle at the end of repositories:
-
-	allprojects {
-		repositories {
-			...
-			maven { url "https://jitpack.io" }
-		}
-	}
-Step 2. Add the dependency
-* 总览
-    * compile 'com.github.luhaoaimama1.RetrofitListHelper:retrofitLib:[Latest release](https://github.com/luhaoaimama1/ZAdapter3/releases)'
-
-    * compile 'com.github.luhaoaimama1.RetrofitListHelper:retrofitHelper:[Latest release](https://github.com/luhaoaimama1/ZAdapter3/releases)'
-
-    * compile 'com.github.luhaoaimama1.RetrofitListHelper:zhelper:[Latest release](https://github.com/luhaoaimama1/ZAdapter3/releases)'
-
-> 注意:zhelper依赖retrofitHelper,retrofitHelper依赖retrofitLib ,所以你选一个即可!
-
 # 功能介绍
 
-## retrofitLib
+> 对于 apt 则是用来给 apisdk用的 算是个小实践把 此项目重点是okhttplib
 
 -[x] 网络请求库 支持上传下载 https cookies等;
 
@@ -33,16 +10,11 @@ Step 2. Add the dependency
 
 -[x] firstLoad那种 网络状态关联;
 
-## retrofitHelper
-
-一个下拉刷新与上拉加载自动完成抽象库；
-
-## zhelper
-
-retrofitHelper的库的具体实现
-
-*   下拉刷新上拉加载采用:ZRefresh
-*   adapter采用:ZAdapter3
+DownLoadCall 下载用的
+DialogCall 网络请求与弹窗绑定用的
+RequestBodyHelper  传参用的map可以直接放入文件
+BaseOKHttpClient 基类okhttp客户端
+BaseImpl 是一个基础设置client
 
 
 # Easy use:
@@ -106,28 +78,8 @@ retrofitHelper的库的具体实现
                 });
 ```
 
-4.下拉刷新与上拉加载的自动完成
-
-```
-
-        final ZonePullView zonePullView = new ZonePullView<MeiZiData>(refresh, adapter) {
-            @NonNull
-            @Override
-            protected Call<MeiZiData> request(int offset, int limit) {
-                return Diycode.getInstance()
-                        .getPics(offset + "", limit + "");
-            }
-
-            @Override
-            protected void handleData(int offset, MeiZiData body) {
-                datas.addAll(body.getResults());
-            }
-        };
-```
-
 # 项目实践
 
-https://github.com/NewbeeMaster/NBDiycode
 
 # Update log
 

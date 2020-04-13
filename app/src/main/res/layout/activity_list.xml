@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:text="Hello_world" />
 
-        <zone.com.retrofitlib.views.LoadingAnimView
+        <zone.com.retrofitlib.android.views.LoadingAnimView
             android:id="@+id/loading"
             android:visibility="gone"
             android:layout_width="match_parent"
